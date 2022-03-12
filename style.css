@@ -7,3 +7,9 @@ body{
   font-family: 'Syne Mono', monospace;
   background-color: #420DBD;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
