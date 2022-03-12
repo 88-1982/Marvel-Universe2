@@ -14,3 +14,9 @@ function character() {
         '<h2 id="characterMainTitle">Enter search term above...</h2>';
     }
   }
+
+
+  function connection() {
+    document.getElementById("characterSpinnerSection").innerHTML = "";
+    document.getElementById("comicsSpinnerSection").innerHTML = "";
+  }
