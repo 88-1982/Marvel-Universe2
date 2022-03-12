@@ -25,3 +25,15 @@
       </form>
     </div>
   </div>
+  <div class="container" id="contentContainer">
+    <div class="d-flex align-items-center" id="characterSpinnerSection"></div>
+    <div class="d-flex align-items-center" id="comicsSpinnerSection"></div>
+    <section id="characterSection"></section>
+    <section id="comicSection"></section>
+  </div>
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
