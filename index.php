@@ -17,7 +17,7 @@
       <h1 class="header-main-title">Marvel Comics Character Search</h1>
       <form id="connectionForm">
         <div class="form-group">
-        <img src="https://wallpaperaccess.com/full/1869517.jpg" alt="marvel-heroes" class="center" width="1000">
+        <img src="https://wallpaperaccess.com/full/1869517.jpg" alt="marvel-heroes" class="center" width="1500">
           <input required type="text" name="name" id="name" class="form-control character-search-box"
             placeholder="(Enter Hero Here )">
         </div>
