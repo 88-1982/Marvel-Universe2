@@ -46,6 +46,20 @@ function character() {
       if (this.status == 200){
         
         const result = JSON.parse(this.responseText);
+
+        if (results["data"].count == 0) {
+          
+          
+        } else if (results == undefined || results.lenght == 0 ){
+
+        } else {
+          const characterAttributes = results["data"].results[0].
+          characterID = results["data"].results[0].id;
+          let output = "";
+
+
+
+        }
         
 
         
