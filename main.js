@@ -34,28 +34,29 @@ function character() {
 
   }
     xhr.onerror = () => {
-      document.getElementById('characterSpinnerSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
+      document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
     }
     xhr.onload = () => {
       if (this.status == 200){
+
         
 
+    } else{
+      document.getElementById
+      ("characterSection").innerHTML = '<h2 id="characterMainTitle"> Bad Request...</h2>';
     }
+  }
     xhr.onloadend = () =>{
-      document.getElementById('characterSpinnerSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
+      document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
 
     } 
+  }
+
   
     
 
   
-    }else{
-      document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">No Request.</h2>';
-
-  
-    }
-
-  }
+    
 
 
 
