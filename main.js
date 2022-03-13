@@ -27,5 +27,14 @@ function character() {
   const name = document.getElementById("name").value;
   const params = "name" + name;
   const url = './connections/name-search.php' + params
+  
+  xhr.onload = () => {
+    if (this.status == 200){
+      document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">Bad request.</h2>';
+      const results = JSON.parse(this.responseText);
+    
 
+  
+    }
   }
+}
