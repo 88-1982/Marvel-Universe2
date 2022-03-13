@@ -46,7 +46,7 @@ function character() {
       if (this.status == 200){
         
         const result = JSON.parse(this.responseText);
-        console.log(this.responseText)
+        
 
         
 
