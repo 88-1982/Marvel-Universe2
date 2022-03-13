@@ -58,13 +58,63 @@ function character() {
           let output = "";
 
 
+          output +=
+          '<h2 id="characterMainTitle">' +
+          "Character" +
+          "</h2>" +
+          '<div class="card flex-md-row mb-4 box-shadow h-md-250" id="characterCard">' +
+          '<div id="characterImage">' +
+          '<img class="card-img-right flex-auto d-md-block img-fluid"' +
+          ' alt="Picture of ' +
+          characterAttributes.name +
+          '" src="' +
+          characterAttributes.thumbnail["path"] +
+          "." +
+          characterAttributes.thumbnail["extension"] +
+          '">' +
+          "</div>" +
+          '<div class="card-body d-flex flex-column align-items-start">' +
+          '<h3 class="mb-0 text-dark" id="characterName">' +
+          characterAttributes.name +
+          "</h3>" +
+          '<p class="card-text mb-3" id="characterDescription">';
+        if (characterAttributes.description !== "") {
+          output += characterAttributes.description;
+        }
+        output +=
+          "</p>" +
+          '<p class="text-muted mb-3" id="comicsAvailable">' +
+          "Comics: " +
+          characterAttributes.comics.available +
+          " | " +
+          "Series: " +
+          characterAttributes.series.available +
+          " | " +
+          "Stories: " +
+          characterAttributes.stories.available +
+          " | " +
+          "Events: " +
+          characterAttributes.events.available +
+          "</p>" +
+          '<p class="mb-1 text-muted" id="characterInfoAttribution">' +
+          results["attributionText"] +
+          "</p>" +
+          "</div>" +
+          "</div>";
+        
+        document.getElementById("characterSection").innerHTML = output;
+        
+        comics(characterID)
+      }
+
+
 
         }
         
 
         
 
-    } else{
+    } else {
       document.getElementById
       ("characterSection").innerHTML = '<h2 id="characterMainTitle"> Bad Request...</h2>';
     }
@@ -74,7 +124,7 @@ function character() {
 
     }
     xhr.send();
-  }
+  
 
   
     
