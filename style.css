@@ -20,4 +20,39 @@ a:visited{
   display: inline-block;
   transition:all 0.2s;
 }
+.header-main-title{
+  color: rgba(255, 255, 255, 0.693);
+}
+.character-search-box, .search-character-button{
+  border-radius: 0;
+}
+.search-character-button{
+  background-color: #d4ed2f
+}
+#characterMainTitle, #comicMainTitle{
+  color: #FFFFFF;
+}
+.card {
+  border:none;
+  border-radius: 2px;
+}
+a:hover
+a:active {
+  color: white;
+  background-color: #ED462F
+  box-shadow 0 1rem 2rem rgba(black, .4);
+  transform: rotate(5deg) scale(1.2);
+  padding: 2px;
+}
+.jumbotron {
+  background-color: #151515;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+  
+
+}
+
 
