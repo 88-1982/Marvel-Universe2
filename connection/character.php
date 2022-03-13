@@ -36,4 +36,3 @@ if (isset($_GET['character-id'])) {
 } else {
 echo "Error: wrong server.";
 }
-?>
