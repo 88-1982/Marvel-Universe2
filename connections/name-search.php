@@ -1,7 +1,9 @@
 <?php
-if (isset($_GET['name'])){
-  $curl = curl_init();
-  $curl_setopt($curl, CURLOPT_RETURNTRANSFER. 1);
+if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest')) {
+  if (isset($_GET['name'])) {
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
   
   $name_to_search = htmlentities(strtolower($_GET['name']));
 
@@ -26,12 +28,12 @@ $query = array(
 
   $comic_url = 'https://gateway.marvel.com:443/v1/public/characters?' .http_build_query($query);
   
-  $curl_setopt($curl, $comic_url);
+  $curl_setopt($curl, CURLOPT_URL, $comic_url);
   
   
   $result = json_decode (curl_exec($curl), true);
 
-  $curl_close();
+  $curl_close($curl);
 
   echo json_encode($result);
 
@@ -42,4 +44,6 @@ $query = array(
 
 
 
-?>
+} else {
+  echo "Error: wrong server.";
+}
