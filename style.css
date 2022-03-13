@@ -13,15 +13,19 @@ body{
   margin-right: auto;
   width: 80%;
 }
+.img {
+  border: 5px solid rgb(14, 12, 12);
+}
+
 a:link,
 a:visited{
   color: #eaed2f;
   text-decoration: none;
   display: inline-block;
-  transition:all 0.2s;
+  transition:all 0.3s;
 }
 .header-main-title{
-  color: rgba(255, 255, 255, 0.693);
+  color: rgba(255, 255, 255, 0.446);
 }
 .character-search-box, .search-character-button{
   border-radius: 0;
@@ -34,14 +38,13 @@ a:visited{
 }
 .card {
   border:none;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 a:hover
 a:active {
   color: white;
-  background-color: #ED462F
+  background-color: #baed2f
   box-shadow 0 1rem 2rem rgba(black, .4);
-  transform: rotate(5deg) scale(1.2);
   padding: 2px;
 }
 .jumbotron {
