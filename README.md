@@ -14,7 +14,7 @@
 
 * Once hero is selected by the user an image of the selected hero will be displayed in the DOM a picture will displayed (browser)
 
-* The user will now have the ablility to veiw hero's stats.  (Place of birth,Super Powers,date of appearance etc)
+* The user will now have the ablility to veiw hero's stats.  (Place of birth,Super Powers,date of appearance all of comics apperances and creators)
 
 ## What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 
@@ -22,10 +22,9 @@ Github
 Boot Strap
 CSS
 Node.js
-PHP
+PHP docs
 Google fonts
 Javascript
-LocalHost
 API
 Color slurp
 HTML
@@ -47,7 +46,7 @@ Xdebug
 
 
 
-### At this point I will have to do more resarch on how I can build out the battle between the selected heros.
+### At this point I will have to do more resarch on how I can build out the battle between the selected heroes.
 
 ## Is there anything else you'd like your instructor to know?
 
