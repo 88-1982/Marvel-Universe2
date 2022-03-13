@@ -38,6 +38,7 @@ function character() {
     }
     xhr.onload = () => {
       if (this.status == 200){
+        const result = JSON.parse(this.responseText);
 
         
 
@@ -50,6 +51,7 @@ function character() {
       document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
 
     } 
+    xhr.send()
   }
 
   
