@@ -24,11 +24,24 @@ function character() {
 
 
   const xhr = new XMLHttpRequest();
-  const name = document.getElementById("name").value;
-  const params = "name" + name;
-  const url = './connections/name-search.php' + params
+  xhr.open('GET','./conections/name-search.php',true)
   
-  xhr.onload = () => {
+  xhr.onloadstart = () => {
+    document.getElementById("characterSpinnerSection").innerHTML =
+    '<strong id="spinnerText" class="text-primary">Loading...</strong>' +
+    '<div class="text-primary spinner-border ml-auto" role="status" ' +
+    'aria-hidden="true" id="spinner"></div>';
+
+  }
+    xhr.onload = () => {
+    }
+    xhr.onerror = () => {
+
+    }
+    xhr.onload = () =>{
+
+    } 
+  
     if (this.status == 200){
       document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">Bad request.</h2>';
       const results = JSON.parse(this.responseText);
@@ -45,14 +58,4 @@ function character() {
 
 
 
-
-
-
-
-}
-xhr.onloadend = () => {
-  document.getElementById("characterSpinnerSection").innerHTML = "";
-
-}
-xhr.send()
   }
