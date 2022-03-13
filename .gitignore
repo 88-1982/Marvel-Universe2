@@ -3,8 +3,8 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-.connection
-.connection.php
+connection
+connection.php
 
 # Icon must end with two \r
 Icon
