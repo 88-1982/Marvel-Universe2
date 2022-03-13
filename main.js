@@ -35,6 +35,9 @@ function character() {
     
 
   
-    }
+    }else{
+      document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">No Request.</h2>';
+
   }
+}
 }
