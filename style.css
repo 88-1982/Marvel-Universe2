@@ -13,3 +13,11 @@ body{
   margin-right: auto;
   width: 80%;
 }
+a:link,
+a:visited{
+  color: #eaed2f;
+  text-decoration: none;
+  display: inline-block;
+  transition:all 0.2s;
+}
+
