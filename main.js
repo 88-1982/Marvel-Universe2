@@ -109,12 +109,7 @@ function character() {
 
 
 
-        }
-        
-
-        
-
-    } else {
+      } else {
       document.getElementById
       ("characterSection").innerHTML = '<h2 id="characterMainTitle"> Bad Request...</h2>';
     }
@@ -123,10 +118,16 @@ function character() {
       document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
 
     }
-    xhr.send();
+    xhr.send()
+  } 
+
+  function comics(characterID) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", './connections/character.php?character-id=' + characterID, true)
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   
 
-  
+  } 
     
 
   
