@@ -24,21 +24,29 @@ function character() {
 
 
   const xhr = new XMLHttpRequest();
-  xhr.open('GET','./conections/name-search.php',true)
+  const name = document.getElementById("name").value;
+  const params = "name" + name;
+  const url = './conections/name-search.php?' + params
+
+
   
-  xhr.onloadstart = () => {
+  xhr.open('GET','./connections/name-search.php' + params, true)
+  
+  xhr.onloadstart = function() {
     document.getElementById("characterSpinnerSection").innerHTML =
     '<strong id="spinnerText" class="text-primary">Loading...</strong>' +
     '<div class="text-primary spinner-border ml-auto" role="status" ' +
     'aria-hidden="true" id="spinner"></div>';
 
   }
-    xhr.onerror = () => {
+    xhr.onerror = function() {
       document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
     }
-    xhr.onload = () => {
+    xhr.onload = function() {
       if (this.status == 200){
+        
         const result = JSON.parse(this.responseText);
+        console.log(this.responseText)
 
         
 
@@ -47,11 +55,11 @@ function character() {
       ("characterSection").innerHTML = '<h2 id="characterMainTitle"> Bad Request...</h2>';
     }
   }
-    xhr.onloadend = () =>{
+    xhr.onloadend = function(){
       document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
 
-    } 
-    xhr.send()
+    }
+    xhr.send();
   }
 
   
