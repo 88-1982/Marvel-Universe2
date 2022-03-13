@@ -15,7 +15,7 @@ function character() {
       document.getElementById("characterSection").innerHTML =
         '<h2 id="characterMainTitle">Enter search term above...</h2>';
     }
-  }
+  
 
 
   function connection() {
@@ -133,12 +133,41 @@ function character() {
       '<h2 id="characterMainTitle">Error....</h2>';
     document.getElementById("comicSection").innerHTML =
       '<h2 id="characterMainTitle">Error....</h2>';
+      {
+        xhr.onload = function () {
+          if (this.status == 200) {
+            const results = JSON.parse(this.responseText),
+              comics = results["data"].results,
+              comicSection = document.getElementById("comicSection");
+
+              if (results["data"] == 0) {
+                let output = "";
+                comicSection.innerHTML = output;
+                comicSection.innerHTML = "<h2>No comics Available</h2>";
+
+              } else {
+                
+                let output = "",
+                  creators = "";
+                
+                  output +=
+                  '<h2 id="comicMainTitle">Comics</h2>' + '<div class="card-columns">';
+        
+                for (const i in comics) {
+                  if (comics.hasOwnProperty(i)) {
+                    const comic = comics[i];
+              
+              
+              
+              
+              
+              }
+}  
+
   }
-    
-
-  
-    
-
-
-
-  
+    }
+    xhr.send()
+  }
+}
+  }
+}
