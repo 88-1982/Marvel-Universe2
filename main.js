@@ -33,18 +33,19 @@ function character() {
     'aria-hidden="true" id="spinner"></div>';
 
   }
-    xhr.onload = () => {
-    }
     xhr.onerror = () => {
+      document.getElementById('characterSpinnerSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
+    }
+    xhr.onload = () => {
+      if (this.status == 200){
+        
 
     }
-    xhr.onload = () =>{
+    xhr.onloadend = () =>{
+      document.getElementById('characterSpinnerSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
 
     } 
   
-    if (this.status == 200){
-      document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">Bad request.</h2>';
-      const results = JSON.parse(this.responseText);
     
 
   
@@ -52,10 +53,10 @@ function character() {
       document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">No Request.</h2>';
 
   
+    }
+
+  }
+
+
+
   
-
-  }
-
-
-
-  }

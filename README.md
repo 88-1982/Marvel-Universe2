@@ -124,3 +124,5 @@ Xdebug
 * 8:00 Researced XAMPP and how to download it, install it and use it properly
 * 9:00 got XAMPP to install, working on getting data to display in the browser
 * 10:00 Restarted project due to pushing sensitive information to github
+* 10:00 fleshed out main.js
+* 11:00 worked on index.php
