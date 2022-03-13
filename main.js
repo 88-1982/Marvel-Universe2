@@ -118,7 +118,7 @@ function character() {
       document.getElementById('characterSection').innerHTML = '<h2 id="characterMainTitle">Error...</h2>'
 
     }
-    xhr.send()
+    xhr.send();
   } 
 
   function comics(characterID) {
@@ -156,6 +156,21 @@ function character() {
                 for (const i in comics) {
                   if (comics.hasOwnProperty(i)) {
                     const comic = comics[i];
+
+                    output +=
+                    '<div class="card">' +
+                    '<a href="./comic.php?comic-id=' +
+                    comic.id +
+                    '"><img src="' +
+                    comic.thumbnail["path"] +
+                    "." +
+                    comic.thumbnail["extension"] +
+                    '" class="card-img-top" alt="' +
+                    comic.title +
+                    '"></a>' +
+                    '<div class="card-body">' +
+                    '<h5 class="card-title">' +
+                    comic.title + "</h5>";
               
               
               
@@ -166,7 +181,7 @@ function character() {
 
   }
     }
-    xhr.send()
+    xhr.send();
   }
 }
   }
