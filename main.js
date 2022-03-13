@@ -128,6 +128,12 @@ function character() {
   
 
   } 
+  xhr.onerror = function () {
+    document.getElementById("characterSection").innerHTML =
+      '<h2 id="characterMainTitle">Error....</h2>';
+    document.getElementById("comicSection").innerHTML =
+      '<h2 id="characterMainTitle">Error....</h2>';
+  }
     
 
   
