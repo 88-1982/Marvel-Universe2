@@ -8,7 +8,7 @@
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Marvel Comics Search - Creator</title>
+  <title>Marvel Comics API Search - Creator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="comicCreator()" class="comic-creator__body">
@@ -20,7 +20,7 @@
     </div> 
   </div> 
   <script src="main.js"></script>
-
+ 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>

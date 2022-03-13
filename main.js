@@ -38,6 +38,21 @@ function character() {
     }else{
       document.getElementById("characterSection").innerHTML = '<h2 id="characterMainTitle">No Request.</h2>';
 
+  
+  
+
   }
+
+
+
+
+
+
+
 }
+xhr.onloadend = () => {
+  document.getElementById("characterSpinnerSection").innerHTML = "";
+
 }
+xhr.send()
+  }
